@@ -10,6 +10,7 @@ import PostTitle from '../../components/post-title';
 import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
+import { OG_IMAGE_URL } from '../../lib/constants';
 
 type Props = {
   post: PostType;
@@ -33,7 +34,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
             <article className="mb-32">
               <Head>
                 <title>{post.title}</title>
-                <meta property="og:image" content="/assets/blog/authors/alepro.jpg" />
+                <meta property="og:image" content={OG_IMAGE_URL} />
               </Head>
               <PostHeader title={post.title} date={post.date} author={post.author} />
               <PostBody content={post.content} />

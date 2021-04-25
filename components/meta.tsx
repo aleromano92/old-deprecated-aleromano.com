@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { OG_IMAGE_URL } from '../lib/constants';
 
 const Meta = () => {
   return (
@@ -14,7 +15,7 @@ const Meta = () => {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`Alessandro Romano's personal website.`} />
-      <meta property="og:image" content="/assets/blog/authors/alepro.jpg" />
+      <meta property="og:image" content={OG_IMAGE_URL} />
     </Head>
   );
 };
