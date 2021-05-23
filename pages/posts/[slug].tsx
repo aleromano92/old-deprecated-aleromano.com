@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../../components/container';
-import PostBody from '../../components/post-body';
+import Container from '../../components/common/container';
+import PostBody from '../../components/posts/post-body';
 import Header from '../../components/header';
-import PostHeader from '../../components/post-header';
+import PostHeader from '../../components/posts/post-header';
 import Layout from '../../components/layout';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
-import PostTitle from '../../components/post-title';
+import PostTitle from '../../components/posts/post-title';
 import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
@@ -36,7 +36,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <title>{post.title}</title>
                 <meta property="og:image" content={OG_IMAGE_URL} />
               </Head>
-              <PostHeader title={post.title} date={post.date} author={post.author} />
+              <PostHeader title={post.title} date={post.date} author={post.author} readingTime={post.readingTime} />
               <PostBody content={post.content} />
             </article>
           </>
@@ -55,7 +55,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage']);
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage', 'readingTime']);
   const content = await markdownToHtml(post.content || '');
 
   return {
