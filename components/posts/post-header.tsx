@@ -1,9 +1,9 @@
 import { FunctionComponent } from 'react';
-import { IReadTimeResults } from 'reading-time';
 import Avatar from '../common/avatar';
 import DateFormatter from '../common/date-formatter';
 import PostTitle from './post-title';
 import Author from '../../types/author';
+import { IReadTimeResults } from 'reading-time';
 
 type Props = {
   title: string;
