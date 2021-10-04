@@ -35,7 +35,7 @@ Another great example of Microsoft embracing opens ource, releasing its applicat
 I think the feature I abuse the most. You don't need any external application, it is built-in in any Windows 10 setup.
 Just hold Win Key + V to get the Clipboard Manager that (once activated) is able to store almost infinite Copy Entries, including text, images and whatever you were able to copy.
 It is a breeze to remove all or just some of them and you can even pin your favorite!
-INSERT IMAGE
+![Clipboard Manager](/assets/blog/0-mac-to-win10/clipboard-manager.png)
 
 ### 
 
