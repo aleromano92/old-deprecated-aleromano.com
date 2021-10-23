@@ -25,7 +25,7 @@ This is a quick Win (pun intended) as Windows Search is greatly improved: press 
 
 I used to move my cursor in the bottom right corner to securely block my Mac. I now press Win Key + L.
 
-### Terminal/iTerm -> WIndows Terminal
+### Terminal/iTerm -> Windows Terminal
 
 Another great example of Microsoft embracing opens ource, releasing its applications and made them suitable for developers.
 [Windows Terminal, Console and Command line](https://github.com/microsoft/terminal) has all the features i needed: it works well with old **cmd**, **Power Shell** and **bash** console you get by installing WSL.
@@ -37,5 +37,8 @@ Just hold Win Key + V to get the Clipboard Manager that (once activated) is able
 It is a breeze to remove all or just some of them and you can even pin your favorite!
 ![Clipboard Manager](/assets/blog/0-mac-to-win10/clipboard-manager.png)
 
-### 
+### Emoji Picker -> Win Key + . (dot)
+
+While on Mac OS you can press Command + Control + Spacebar to open the emoji
+![Emoji Picker](/assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
