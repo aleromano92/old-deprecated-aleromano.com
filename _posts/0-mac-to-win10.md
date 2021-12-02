@@ -45,3 +45,4 @@ While on Mac OS you can press Command + Control + Spacebar to open the emoji pic
 On Windows you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
 ![Emoji Picker](/assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
+> Thanks for your time
