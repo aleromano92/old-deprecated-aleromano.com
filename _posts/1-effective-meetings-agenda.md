@@ -45,7 +45,7 @@ Objectives (they may be more than one) should be simple and easily measurable.
   - Approve or deny the budget given the business case we are going to present
   - Finalize the algorithm taking a decision on proposal A or B
 
-**Not so good* objectives:
+**Not so good** objectives:
 
   - Talk about the new product
   - Understand how to handle this process
