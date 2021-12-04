@@ -2,6 +2,9 @@ module.exports = {
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
+      backgroundImage: {
+        'ale-big': "url('/assets/alepro.jpg')",
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
@@ -30,4 +33,4 @@ module.exports = {
       },
     },
   },
-}
+};
