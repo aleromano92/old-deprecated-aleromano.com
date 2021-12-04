@@ -1,5 +1,5 @@
-import Avatar from './avatar';
-import DateFormatter from './date-formatter';
+import Avatar from './common/avatar';
+import DateFormatter from './common/date-formatter';
 import Link from 'next/link';
 import Author from '../types/author';
 
