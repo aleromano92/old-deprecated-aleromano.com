@@ -8,11 +8,9 @@ export const Intro = () => {
         <h1 className="text-4xl md:text-6xl font-bold md:pr-8">Alessandro Romano</h1>
         <p className="text-2xl md:text-3xl italic md:pr-8">The Empathic Tech Lead</p>
         <p className="text-lg mt-4">
-          My mind would say I never let it rest, even when I meditate or try to sleep. I believe in "Done is better than
-          perfect!", still I'm a detail maniac obsessed with how things work: from universal physics laws, to that
-          just-launched shiny Cloud service. I'm still not perfect. I was thunderstruck on the Hello World Way with
-          first RPG Maker, not knowing programming will always stay close. Even when, later, I would have understood
-          empathy and emotional intelligence may help me more than any technical knowledge.
+          I'm addicted to details obsessed with how things work: from Cloud services to human relationships. Since my
+          first Hello World in RPG Maker, I have come to believe that <strong>empathy</strong> and emotional
+          intelligence are far more important in the IT field.
         </p>
       </header>
       <Image
