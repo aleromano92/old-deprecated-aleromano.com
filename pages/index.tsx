@@ -1,6 +1,6 @@
 import Container from '../components/common/container';
 import MoreStories from '../components/more-stories';
-import HeroPost from '../components/hero-post';
+import HeroPost from '../components/posts/hero-post';
 import { Intro } from '../components/intro';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
@@ -29,6 +29,7 @@ const Index = ({ allPosts }: Props) => {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              readingTime={heroPost.readingTime}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -41,7 +42,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'excerpt']);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'excerpt', 'readingTime']);
 
   return {
     props: { allPosts },
