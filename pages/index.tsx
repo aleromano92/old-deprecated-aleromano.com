@@ -18,7 +18,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Alessandro Romano</title>
+          <title>Alessandro Romano - The Empathic Tech Lead</title>
         </Head>
         <Container>
           <Intro />
