@@ -1,17 +1,21 @@
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`;
+    }
+    return `rgb(var(${variable}) / ${opacityValue})`;
+  };
+}
+
 module.exports = {
   mode: 'jit',
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
-      backgroundImage: {
-        'ale-big': "url('/assets/alepro.jpg')",
-      },
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        background: withOpacityValue('--color-background'),
+        foreground: withOpacityValue('--color-foreground'),
+        primary: withOpacityValue('--color-primary'),
       },
       spacing: {
         28: '7rem',

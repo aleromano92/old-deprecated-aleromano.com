@@ -13,3 +13,14 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+.theme-light {
+  --color-background: 255 235 137;
+  --color-foreground: 73 50 122;
+  --color-primary: 73 50 122;
+}
+
+.theme-dark {
+  --color-background: 73 50 122;
+  --color-foreground: 255 235 137;
+  --color-primary: 255 235 137;
+}
