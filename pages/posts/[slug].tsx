@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../../components/common/container';
+import { Container } from '../../components/common/container';
 import PostBody from '../../components/posts/post-body';
-import Header from '../../components/header';
 import PostHeader from '../../components/posts/post-header';
 import Layout from '../../components/layout';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
@@ -26,7 +25,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
   return (
     <Layout preview={preview}>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
