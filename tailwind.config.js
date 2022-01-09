@@ -8,7 +8,6 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  mode: 'jit',
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {

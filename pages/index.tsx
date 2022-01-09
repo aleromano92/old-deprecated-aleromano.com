@@ -1,5 +1,5 @@
 import { Container } from '../components/common/container';
-import { MorePosts } from '../components/more-posts';
+import { BlogPosts } from '../components/blog-posts';
 import HeroPost from '../components/posts/hero-post';
 import { Intro } from '../components/intro';
 import Layout from '../components/layout';
@@ -12,8 +12,6 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
-  const latestPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
@@ -22,16 +20,7 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {latestPost && (
-            <HeroPost
-              title={latestPost.title}
-              date={latestPost.date}
-              slug={latestPost.slug}
-              excerpt={latestPost.excerpt}
-              readingTime={latestPost.readingTime}
-            />
-          )}
-          {morePosts.length > 0 && <MorePosts posts={morePosts} />}
+          {allPosts.length > 0 && <BlogPosts posts={allPosts} />}
         </Container>
       </Layout>
     </>

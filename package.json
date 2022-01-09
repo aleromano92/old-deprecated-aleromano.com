@@ -18,7 +18,7 @@
     "reading-time": "^1.4.0",
     "remark": "^11.0.2",
     "remark-html": "^10.0.0",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "latest"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
