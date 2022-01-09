@@ -1,17 +1,16 @@
-import Avatar from '../common/avatar';
-import DateFormatter from '../common/date-formatter';
 import Link from 'next/link';
-import Author from '../../types/author';
+import { IReadTimeResults } from 'reading-time';
+import { DateAndReadingTime } from '../common/date-reading-time';
 
 type Props = {
   title: string;
   date: string;
   excerpt: string;
-  author: Author;
   slug: string;
+  readingTime: IReadTimeResults;
 };
 
-const PostPreview = ({ title, date, excerpt, author, slug }: Props) => {
+export const PostPreview = ({ title, date, excerpt, readingTime, slug }: Props) => {
   return (
     <div>
       <h3 className="text-3xl mb-3 leading-snug">
@@ -19,13 +18,8 @@ const PostPreview = ({ title, date, excerpt, author, slug }: Props) => {
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
-      </div>
+      <DateAndReadingTime date={date} readingTime={readingTime} />
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   );
 };
-
-export default PostPreview;

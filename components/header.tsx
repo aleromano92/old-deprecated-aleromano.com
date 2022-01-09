@@ -13,7 +13,7 @@ export const Header = () => {
     <Container>
       <header className="flex-row flex justify-between mt-8 mb-8 md:mb-6">
         <div>
-          <h1 className="text-2xl md:text-6xl font-bold md:pr-8">Alessandro Romano</h1>
+          <h1 className="text-3xl md:text-6xl font-bold md:pr-8">Alessandro Romano</h1>
           <p className="text-xl md:text-3xl italic md:pr-8">The Empathic Tech Lead</p>
         </div>
         <button className="self-center rounded-full border-foreground border-solid border-2" onClick={toggleTheme}>

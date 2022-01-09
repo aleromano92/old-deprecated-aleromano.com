@@ -1,5 +1,5 @@
 import { Container } from '../components/common/container';
-import MoreStories from '../components/more-stories';
+import { MorePosts } from '../components/more-posts';
 import HeroPost from '../components/posts/hero-post';
 import { Intro } from '../components/intro';
 import Layout from '../components/layout';
@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
+  const latestPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
@@ -22,17 +22,16 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {heroPost && (
+          {latestPost && (
             <HeroPost
-              title={heroPost.title}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-              readingTime={heroPost.readingTime}
+              title={latestPost.title}
+              date={latestPost.date}
+              slug={latestPost.slug}
+              excerpt={latestPost.excerpt}
+              readingTime={latestPost.readingTime}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MorePosts posts={morePosts} />}
         </Container>
       </Layout>
     </>
