@@ -1,11 +1,9 @@
-import { FunctionComponent } from 'react';
 import Link from 'next/link';
-
+import { IReadTimeResults } from 'reading-time';
 import Avatar from '../common/avatar';
-import DateFormatter from '../common/date-formatter';
 import PostTitle from './post-title';
 import Author from '../../types/author';
-import { IReadTimeResults } from 'reading-time';
+import { DateAndReadingTime } from '../common/date-reading-time';
 
 type Props = {
   title: string;
@@ -13,12 +11,6 @@ type Props = {
   author: Author;
   readingTime: IReadTimeResults;
 };
-
-const DateAndReadingTime: FunctionComponent<Pick<Props, 'date' | 'readingTime'>> = ({ date, readingTime }) => (
-  <div className="ml-16 mb-6 text-lg">
-    <DateFormatter dateString={date} /> • <span>{readingTime.text}</span>
-  </div>
-);
 
 const PostHeader = ({ title, date, author, readingTime }: Props) => {
   return (

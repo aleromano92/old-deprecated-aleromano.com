@@ -1,6 +1,5 @@
 import { Container } from '../components/common/container';
 import { BlogPosts } from '../components/blog-posts';
-import HeroPost from '../components/posts/hero-post';
 import { Intro } from '../components/intro';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
