@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon } from '@heroicons/react/solid';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import { Container } from './common/container';
 import { useAppContext } from './common/appContext';
 
@@ -16,9 +16,9 @@ export const Header = () => {
           <h1 className="text-3xl md:text-6xl font-bold md:pr-8">Alessandro Romano</h1>
           <p className="text-xl md:text-3xl italic md:pr-8">The Empathic Tech Lead</p>
         </div>
-        <button className="self-center rounded-full border-foreground border-solid border-2" onClick={toggleTheme}>
-          {appContext.themeName === 'theme-light' && <SunIcon className="h-14" />}
-          {appContext.themeName === 'theme-dark' && <MoonIcon className="h-14" />}
+        <button className="self-center rounded-full border-foreground border-solid border-2 p-1" onClick={toggleTheme}>
+          {appContext.themeName === 'theme-light' && <FaSun className="h-10 w-10" />}
+          {appContext.themeName === 'theme-dark' && <FaMoon className="h-10 w-10" />}
         </button>
       </header>
     </Container>
