@@ -6,7 +6,7 @@ interface AppContextType {
 }
 
 const defaultContext = {
-  themeName: 'theme-light',
+  themeName: 'light',
   setThemeName: (name: string) => {},
 };
 
