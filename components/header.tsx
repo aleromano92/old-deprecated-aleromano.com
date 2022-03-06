@@ -16,7 +16,10 @@ export const Header = () => {
           <h1 className="text-3xl md:text-4xl font-bold md:pr-8">Alessandro Romano</h1>
           <p className="text-xl md:text-2xl italic md:pr-8">The Empathic Tech Lead</p>
         </div>
-        <button className="self-center rounded-full border-foreground border-solid border-2 p-1" onClick={toggleTheme}>
+        <button
+          className="self-center rounded-full border-background-500 dark:border-foreground-500 border-solid border-2 p-1"
+          onClick={toggleTheme}
+        >
           {appContext.themeName === 'light' && <FaSun className="h-10 w-10" />}
           {appContext.themeName === 'dark' && <FaMoon className="h-10 w-10" />}
         </button>

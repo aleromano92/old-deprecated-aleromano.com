@@ -39,10 +39,10 @@ It is a breeze to remove all or just some of them and you can even pin your favo
 
 ### Emoji Picker -> Win Key + . (dot)
 
-While on Mac OS you can press Command + Control + Spacebar to open the emoji picker 
+While on Mac OS you can press Command + Control + Spacebar to open the emoji picker
 ![Emoji Picker Mac](/assets/blog/0-mac-to-win10/emojiPickerMac.png)
 
 On Windows you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
 ![Emoji Picker](/assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
-> Thanks for your time
+> Thanks for your time.

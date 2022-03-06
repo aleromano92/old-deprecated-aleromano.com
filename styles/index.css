@@ -12,7 +12,7 @@
 @tailwind utilities;
 /* Stop purging. */
 
-/* Your own custom utilities */
+/* Your own custom utilities
 .light {
   --color-background: 255 235 137;
   --color-foreground: 73 50 122;
@@ -23,4 +23,4 @@
   --color-background: 73 50 122;
   --color-foreground: 255 235 137;
   --color-primary: 255 235 137;
-}
+} */
