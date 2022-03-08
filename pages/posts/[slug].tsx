@@ -29,7 +29,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="mb-16">
               <Head>
                 <title>{post.title}</title>
                 <meta property="og:image" content={OG_IMAGE_URL} />

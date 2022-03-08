@@ -1,6 +1,6 @@
 ---
 title: 'I renovate my Home Office'
-excerpt: 'Come find the things you should consider when creating a home office setup for remote working.'
+excerpt: "There are things you should consider when creating a home office setup for remote working. Here's what I did."
 date: '2022-03-07T00:00:00.666Z'
 author:
   name: Alessandro Romano

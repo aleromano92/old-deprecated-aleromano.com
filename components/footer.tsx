@@ -4,12 +4,12 @@ import { Container } from './common/container';
 
 const Footer = () => {
   const linkIconClasses =
-    'text-background-500 hover:text-background-800 dark:text-foreground-500 dark:hover:text-foreground-800';
+    'text-background-500 hover:text-background-800 dark:text-foreground-500 dark:hover:text-foreground-800 text-3xl';
 
   return (
     <footer className="pb-4">
       <Container>
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="flex flex-col-reverse items-center justify-between md:flex-row">
           <span className="text-sm sm:text-center">
             © 2022{' '}
             <a href="https://aleromano.com" target="_blank" className="hover:underline">
@@ -17,7 +17,7 @@ const Footer = () => {
             </a>{' '}
             All Rights Reserved.
           </span>
-          <div className="flex mt-4 space-x-6 justify-center">
+          <div className="flex mb-4 space-x-6 justify-center">
             <a href="https://twitter.com/_aleromano" className={linkIconClasses}>
               <FaTwitter />
             </a>

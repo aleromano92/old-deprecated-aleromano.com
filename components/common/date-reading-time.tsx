@@ -12,7 +12,7 @@ const DateFormatter: React.FC<Pick<Props, 'date'>> = ({ date }) => {
 };
 
 export const DateAndReadingTime: React.FC<Props> = ({ date, readingTime }) => (
-  <div className="text-lg mb-4 text-primary text-opacity-75">
+  <div className="text-sm mb-4 text-primary text-opacity-75">
     <DateFormatter date={date} /> • <span>{readingTime.text}</span>{' '}
   </div>
 );

@@ -12,14 +12,14 @@ type Props = {
 
 export const PostPreview = ({ title, date, excerpt, readingTime, slug }: Props) => {
   return (
-    <div>
-      <h3 className="text-xl md:text-3xl font-bold mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+    <Link as={`/posts/${slug}`} href="/posts/[slug]">
+      <div className="p-4 border-solid border-2 rounded border-background-500 dark:border-foreground-500">
+        <h3 className="text-xl md:text-3xl font-bold mb-2 leading-snug">
           <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <DateAndReadingTime date={date} readingTime={readingTime} />
-      <p className="text-lg mb-4">{excerpt}</p>
-    </div>
+        </h3>
+        <DateAndReadingTime date={date} readingTime={readingTime} />
+        <p className="text-lg">{excerpt}</p>
+      </div>
+    </Link>
   );
 };
