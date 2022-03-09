@@ -50,12 +50,10 @@ function CandyDispenser() {
 }
 ```
 
-Now I want to ask you a question and I want you to think hard about it before
-moving forward. I'm going to make a change to this and I want you to tell me
-which will have the better performance characteristics.
+Ora, voglio fare una domanda e vorrei che rifletteste bene sulla risposta prima di andare avanti.
+Sto per apportare un piccolo cambiamento e voglio che proviate a capire quale codice sia più performante.
 
-The only thing I'm going to change is wrap the `dispense` function inside
-`React.useCallback`:
+Il cambiamento è un wrap della funzione `dispense` all'interno di `React.useCallback`:
 
 ```js
 const dispense = React.useCallback((candy) => {
@@ -63,7 +61,7 @@ const dispense = React.useCallback((candy) => {
 }, []);
 ```
 
-Here's the original again:
+Ecco di nuovo l'originale:
 
 ```js
 const dispense = (candy) => {
@@ -71,31 +69,30 @@ const dispense = (candy) => {
 };
 ```
 
-So here's my question, in this specific case, which of these is better for
-performance? Go ahead and submit your guess (this is not recorded anywhere):
+La domanda è: qual è più performante?
 
-<Poll />
+_Lascio un po' di spazio per non fare spoiler sulla risposta..._
 
-_Let me give you some space to not spoil the answer for you..._
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-<div style={{ height: 400 }} />
+_Continua a scrollare... Hai ormai risposto, giusto?_
 
-_Keep scrolling... You did answer, didn't you?_
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-<div style={{ height: 400 }} />
+_Ecco la risposta..._
 
-_There, that should do it..._
+## perché `useCallback` ha performance peggiori?!
 
-## Why is `useCallback` worse?!
+Si legge spesso che l'uso di `React.useCallback` migliora le performance e che "le funzioni inline possono essere problematiche per le performance", quindi perché è meglio _non_ usare `useCallback`?
 
-We hear a lot that you should use `React.useCallback` to improve performance and
-that "inline functions can be problematic for performance," so how could it ever
-be better to _not_ `useCallback`?
+Facciamo un passo indietro dall'esempio proposto e da React in generale.
 
-Just take a step back from our specific example, and even from React and
-consider this: **Every line of code which is executed comes with a cost.** Let
-me refactor the `useCallback` example a bit (no actual changes, just moving
-things around) to illustrate things more clearly:
+Consideriamo che: **Ogni linea di codice che viene eseguita ha un costo.**
+Proviamo ad esplodere l'esempio che usa `useCallback` al fine di illustrare meglio le istruzioni che vengono eseguite (senza cambiare il comportamento):
 
 ```js
 const dispense = (candy) => {
@@ -104,7 +101,7 @@ const dispense = (candy) => {
 const dispenseCallback = React.useCallback(dispense, []);
 ```
 
-And here's the original again:
+Di nuovo l'originale:
 
 ```js
 const dispense = (candy) => {
@@ -112,37 +109,27 @@ const dispense = (candy) => {
 };
 ```
 
-Notice anything about these? Let's look at the diff:
+Notate qualcosa di strano? Guardiamo la diff:
 
-```tsx add=4
+```diff
 const dispense = (candy) => {
   setCandies((allCandies) => allCandies.filter((c) => c !== candy));
 };
-const dispenseCallback = React.useCallback(dispense, []);
++ const dispenseCallback = React.useCallback(dispense, []);
 ```
 
-Yeah, they're _exactly_ the same except the `useCallback` version is doing
-_more_ work. Not only do we have to define the function, but we also have to
-define an array (`[]`) _and_ call the `React.useCallback` which itself is
-setting properties/running through logical expressions etc.
+Sono _esattamente_ le stesse a part che la versione con `useCallback` esegue
+_più_ istruzioni. Non solo la definizione della funzione, ma anche la definizione di un array (`[]`) _e_ la chiamata a `React.useCallback` che sta a sua volta settando properties ed eseguendo altre istruzioni etc.
 
-So in _both_ cases JavaScript must allocate memory for the function definition
-on every render and depending on how `useCallback` is implemented, you may get
-_more_ allocation for function definitions (this is actually not the case, but
-the point still stands). This is what I was trying to get across with my [twitter
-poll here](https://twitter.com/kentcdodds/status/1135943012410830848)
+In _entrambi_ i casi JavaScript deve allocare memoria per la definizione della funzione ad ogni _render_ e in base a come `useCallback` è implementata, si ottiene
+_altra_ allocazione per le definizioni delle funzioni (non è questo il caso, ma il punto resta valido).
 
-<callout-info class="aside">
-  Granted, I had several people tell me that was worded poorly, so my apologies if you got the wrong answer but actually
-  knew the correct answer.
-</callout-info>
+> Questo è stato anche oggetto di un sondaggio su [Twitter da parte di Kent](https://twitter.com/kentcdodds/status/1135943012410830848)
 
-I'd like to mention also that on the second render of the component, the
-original `dispense` function gets garbage collected (freeing up memory space)
-and then a new one is created. However with `useCallback` the original
-`dispense` function wont get garbage collected and a new one is created, so
-you're worse-off from a memory perspective as well.
+Altra menzione è il fatto che nel secondo render del componente, la funzione `dispense` originale viene garbage collected (liberando spazio in memoria) ed un'altra viene creata.
+Invece, con utilizzo di `useCallback` la funzione `dispense` originale **non** viene garbage collected ed un'altra viene creata, quindi anche dal punto di vista dello spazio di memoria utilizzato le performance sono peggiori.
 
+TODO
 As a related note, if you have dependencies then it's quite possible React is
 hanging on to a reference to previous functions because memoization typically
 means that we keep copies of old values to return in the event we get the same
@@ -151,70 +138,63 @@ this means React also has to hang on to a reference to the dependencies for this
 equality check (which incidentally is probably happening anyway thanks to your
 closure, but it's something worth mentioning anyway).
 
-## How is `useMemo` different, but similar?
+## In che modo `useMemo` è differente, ma allo stesso tempo simile?
 
-`useMemo` is similar to `useCallback` except it allows you to apply memoization
-to any value type (not just functions). It does this by accepting a function
-which returns the value and then that function is _only_ called when the value
-needs to be retrieved (which typically will only happen once each time an
-element in the dependencies array changes between renders).
+`useMemo` è simile `useCallback` tranne per il fatto che applica la memoization a qualsiasi tipo (non solo funzioni).
+Lo permette accettando una funzione che ritorna il valore e in seguito la funzione viene richiamata _solo_ quando il valore deve essere recuperato: tipicamente succede una volta sola per ogni cambio degli elementi dell'array delle dipendenze tra un render e l'altro.
 
-So, if I didn't want to initialize that array of `initialCandies` every render,
-I could make this change:
+Quindi, se non volessi inizializzare `initialCandies` ad ogni render,
+potrei fare così:
 
-```tsx remove=1 add=2-5
-const initialCandies = ['snickers', 'skittles', 'twix', 'milky way'];
-const initialCandies = React.useMemo(() => ['snickers', 'skittles', 'twix', 'milky way'], []);
+```diff
+- const initialCandies = ['snickers', 'skittles', 'twix', 'milky way'];
++ const initialCandies = React.useMemo(
++   () => ['snickers', 'skittles', 'twix', 'milky way'],
++   []
++ );
 ```
 
-And I would avoid that problem, but the savings would be so minimal that the
-cost of making the code more complex just isn't worth it. In fact, it's probably
-worse to use `useMemo` for this as well because again we're making a function
-call and that code is doing property assignments etc.
+E mi eviterei il problema, ma il risparmio sarebbe così minimo da non giustificare l'aggiunta di complessità al codice.
+Di fatti, è probabilmente peggio usare `useMemo` perché nuovamente stiamo chiamando una funzione che a sua volta sta assegnando properties etc.
 
-In this particular scenario, what would be even better is to make this change:
+In questo caso particolare, la cosa migliore è probabilmente questa:
 
-```tsx add=1 remove=3
-const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
+```diff
++ const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
 function CandyDispenser() {
-  const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
+-  const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
   const [candies, setCandies] = React.useState(initialCandies)
 ```
 
-But sometimes you don't have that luxury because the value is either derived
-from `props` or other variables initialized within the body of the function.
+Ma non sempre si ha questa fortuna perché il valore è derivato dalle `props` o da altre variabili inizializzate nel body della funzione.
 
-The point is that it doesn't matter either way. The benefits of optimizing that
-code is so minuscule that your time would be WAY better spent worrying about
-making your product better.
+Il punto resta comunque che i benefici di ottimizzare quel pezzo di codice sono talmente pochi che è meglio investire il tempo nel creare un prodotto migliore.
 
-## What's the point?
+## Cosa mi porto a casa?
 
-The point is this:
+**Le ottimizzazioni di performance non sono mai gratuite. Hanno SEMPRE un costo, ma il beneficio apportato NON sempre lo ripaga.**
 
-**Performance optimizations are not free. They ALWAYS come with a cost but do
-NOT always come with a benefit to offset that cost.**
+Perciò, _ottimizza responsabilmente_.
 
-Therefore, _optimize responsibly_.
+## Quindi quando _dovrei_ usare `useMemo` e `useCallback`?
 
-## So when _should_ I `useMemo` and `useCallback`?
+Ci sono ragione specifiche per cui questi hooks sono built-in in React:
 
-There are specific reasons both of these hooks are built-into React:
+1. Uguaglianza referenziale
+2. Calcoli computazionalmente pesanti
 
-1. Referential equality
-2. Computationally expensive calculations
+## Uguaglianza referenziale
 
-## Referential equality
-
-If you're new to JavaScript/programming, it wont take long before you learn why
-this is the case:
+Se siete nuovi alla programmazione/Javascript, imparerete velocemente che non tutti i tipi primitivi si comportano allo stesso modo quando si applica l'operatore di uguaglianza:
 
 ```js
+// EXPECTED
 true === true // true
 false === false // true
 1 === 1 // true
 'a' === 'a' // true
 
+// UNEXPECTED(?)
 {} === {} // false
 [] === [] // false
 () => {} === () => {} // false
@@ -222,32 +202,26 @@ false === false // true
 const z = {}
 z === z // true
 
-// NOTE: React actually uses Object.is, but it's very similar to ===
+// NOTE: React in realtà usa Object.is, ma è molto simile a ===
 ```
 
-I'm not going to go too deep into this, but suffice it to say when you define an
-object inside your React function component, it is _not_ going to be
-referentially equal to the last time that same object was defined (even if it
-has all the same properties with all the same values).
+Senza scendere troppo nei dettagli, basta ricordare che ogni volta che si definisce un oggetto dentro un Function Component React, questo _non_ sarà
+referenzialmente uguale all'ultima volta in cui lo stesso oggetto è stato definito, anche se ha le stesse properties con gli stessi valori.
 
-There are two situations where referential equality matters in React, let's go
-through them one at a time.
+Ci sono due casi in cui l'uguaglianza referenziale ha impatti in React, vediamoli uno alla volta.
 
-### Dependencies lists
+### Liste di dipendenze
 
-Let's review an example.
+Proviamo a partire da un esempio.
 
-<callout-warning class="aside">
-  Warning, you're about to see some seriously contrived code. Please don't nit-pick that and just focus on the concepts
-  please, thank you.
-</callout-warning>
+> Attenzione, non fate troppo caso al codice che è volutamente complesso. Concentratevi sui concetti.
 
 ```tsx
 function Foo({ bar, baz }) {
   const options = { bar, baz };
   React.useEffect(() => {
     buzz(options);
-  }, [options]); // we want this to re-run if bar or baz change
+  }, [options]); // dobbiamo eseguire nuovamente questo effetto se bar o baz cambiano
   return <div>foobar</div>;
 }
 
@@ -256,30 +230,25 @@ function Blub() {
 }
 ```
 
-The reason this is problematic is because `useEffect` is going to do a
-referential equality check on `options` between every render, and thanks to the
-way JavaScript works, `options` will be new every time so when React tests
-whether `options` changed between renders it'll always evaluate to `true`,
-meaning the `useEffect` callback will be called after every render rather than
-only when `bar` and `baz` change.
+Il problema sta nel fatto che `useEffect` applica un controllo di uguaglianza referenziale su `options` ad ogni render e, per come funziona Javascript, `options` risulterà sempre diverso tra i renders, invocando `useEffect` dopo ogni render invece che esclusivamente al cambio di `bar` o `baz`.
 
-There are two things we can do to fix this:
+Due modi per sistemare questo comportamento:
 
 ```tsx
-// option 1
+// opzione 1
 function Foo({ bar, baz }) {
   React.useEffect(() => {
     const options = { bar, baz };
     buzz(options);
-  }, [bar, baz]); // we want this to re-run if bar or baz change
+  }, [bar, baz]); // uso le singole props invece dell' oggetto combinato
   return <div>foobar</div>;
 }
 ```
 
-That's a great option and if this were a real thing that's how I'd fix this.
+Questa è l'opzione migliore da applicare ai casi reali.
 
-But there's one situation when this isn't a practical solution: If `bar` or
-`baz` are (non-primitive) objects/arrays/functions/etc:
+Ma esiste una situazione che rende questo approccio impraticabile: se `bar` o
+`baz` sono tipi non primitivi come oggetti/array/funzioni/etc:
 
 ```tsx
 function Blub() {
@@ -289,10 +258,12 @@ function Blub() {
 }
 ```
 
-This is precisely the reason why `useCallback` and `useMemo` exist. So here's
-how you'd fix that (all together now):
+Questo è il motivo per cui esistono `useCallback` e `useMemo`.
+
+Quindi ecco l'opzione 2 che li utilizza:
 
 ```tsx
+// opzione 2
 function Foo({ bar, baz }) {
   React.useEffect(() => {
     const options = { bar, baz };
@@ -308,19 +279,13 @@ function Blub() {
 }
 ```
 
-<callout-info>
-  Note that this same thing applies for the dependencies array passed to `useEffect`, `useLayoutEffect`, `useCallback`,
-  and `useMemo`.
-</callout-info>
+> NOTA: Lo stesso si applica per l'array di dipendenze passato a `useEffect`, `useLayoutEffect`, `useCallback` e `useMemo`.
 
-### `React.memo` (and friends)
+### `React.memo` (e i suoi amici)
 
-<callout-warning class="aside">
-  Warning, you're about to see some more contrived code. Please be advised to not nit-pick this either but focus on the
-  concepts, thanks.
-</callout-warning>
+> Attenzione, non fate troppo caso al codice che è volutamente complesso. Concentratevi sui concetti.
 
-Check this out:
+Prendiamo questo:
 
 ```tsx
 function CountButton({ onClick, count }) {
@@ -343,22 +308,18 @@ function DualCounter() {
 }
 ```
 
-Every time you click on either of those buttons, the `DualCounter`'s state
-changes and therefore re-renders which in turn will re-render both of the
-`CountButton`s. However, the only one that _actually_ needs to re-render is the
-one that was clicked right? So if you click the first one, the second one gets
-re-rendered, but nothing changes. We call this an "unnecessary re-render."
+Ogni volta che clicchi uno qualsiasi tra i due pulsanti, lo stato di `DualCounter` cambia e quindi viene eseguito un re-render che si applica ad entrambi i `CountButton`.
+Però, l'unico che _davvero_ ha bisogno del re-render è quello cliccato, giusto?
+Quindi se clicchi il primo, il secondo viene re-renderizzato, anche se nulla è cambiato.
 
-**MOST OF THE TIME YOU SHOULD NOT BOTHER OPTIMIZING UNNECESSARY RERENDERS.**
-React is VERY fast and there are so many things I can think of for you to do
-with your time that would be better than optimizing things like this. In fact,
-the need to optimize stuff with what I'm about to show you is so rare that I've
-literally _never_ needed to do it in the 3 years I worked on PayPal products and
-the even longer time that I've been working with React.
+Questo si chiama "re-rendering non necessario".
 
-However, there are situations when rendering can take a substantial amount of
-time (think highly interactive Graphs/Charts/Animations/etc.). Thanks to the
-pragmatistic nature of React, there's an escape hatch:
+**LA MAGGIOR PARTE DELLE VOLTE NON DOVRESTI PREOCCUPARTI DI OTTIMIZZARE I RE-RENDER NON NECESSARI.**
+React è SUPER veloce e perderesti solo tempo ad ottimizzare queste cose.
+Anche Kent spiega come nei suoi 3 anni di lavoro in PayPal non ha _mai_ dovuto applicare ottimizzazioni simili.
+
+Ma ci sono situazioni per cui un rendering può impiegare molto tempo (considera Grafici/Animazioni molto interattive).
+Grazie alla natura di React esiste un escamotage:
 
 ```tsx
 const CountButton = React.memo(function CountButton({ onClick, count }) {
@@ -366,26 +327,29 @@ const CountButton = React.memo(function CountButton({ onClick, count }) {
 });
 ```
 
-Now React will only re-render `CountButton` when its props change! Woo! But
-we're not done yet. Remember that whole referential equality thing? In the
-`DualCounter` component, we're defining the `increment1` and `increment2`
-functions within the component functions which means every time `DualCounter` is
-re-rendered, those functions will be new and therefore React will re-render both
-of the `CountButton`s anyway.
+Ora `CountButton` verrà re-renderizzato solo se le sue props cambiano!
+Ma non abbiamo finito.
 
-So this is the other situation where `useCallback` and `useMemo` can be of help:
+Ricordate il discorso sull'uguaglianza referenziale?
+Nel componente `DualCounter`, le funzioni `increment1` e `increment2`
+sono definite all'interno del Function Component portando a crearle nuovamente ad ogni re-render di `DualCounter`.
+Questo significa che React farà re-rendering dei `CountButton` in ogni caso.
 
-```tsx [7, 10]
+Questo è l'altro caso in cui `useCallback` e `useMemo` sono d'aiuto:
+
+```diff
 const CountButton = React.memo(function CountButton({ onClick, count }) {
   return <button onClick={onClick}>{count}</button>;
 });
 
 function DualCounter() {
   const [count1, setCount1] = React.useState(0);
-  const increment1 = React.useCallback(() => setCount1((c) => c + 1), []);
+-  const increment1 = () => setCount1((c) => c + 1);
++  const increment1 = React.useCallback(() => setCount1((c) => c + 1), []);
 
   const [count2, setCount2] = React.useState(0);
-  const increment2 = React.useCallback(() => setCount2((c) => c + 1), []);
+- const increment2 = React.useCallback(() => setCount2((c) => c + 1), []);
++ const increment2 = React.useCallback(() => setCount1((c) => c + 1), []);
 
   return (
     <>
@@ -396,17 +360,14 @@ function DualCounter() {
 }
 ```
 
-Now we can avoid the so-called "unnecessary re-renders" of `CountButton`.
+In questo modo evitiamo il "re-rendering non necessario" di `CountButton`.
 
-I would like to re-iterate that I strongly advise against using `React.memo` (or
-it's friends `PureComponent` and `shouldComponentUpdate`) without measuring
-because those optimizations come with a cost and you need to make sure you know
-what that cost will be as well as the associated benefit so you can determine
-whether it will actually be helpful (and not harmful) in your case, and as we
-observe above **it can be tricky to get right all the time so you may not be
-reaping any benefits at all anyway.**
+Voglio reiterare sul fatto che consiglio vivamente di non usare `React.memo` (o
+i suoi amici `PureComponent` e `shouldComponentUpdate`) senza aver prima misurato un problema di performance.
+Queste ottimizzazioni portano un costo, dovete quindi valutare opportunamente il beneficio conseguente.
+Il rischio è di fare più **danni** che altro.
 
-## Computationally expensive calculations
+## Calcoli computazionalmente pesanti
 
 This is the other reason that `useMemo` is a built-in hook for React (note that
 this one does not apply to `useCallback`). The benefit to `useMemo` is that you
