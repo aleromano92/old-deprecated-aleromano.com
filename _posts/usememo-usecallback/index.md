@@ -17,22 +17,7 @@ author:
   picture: '/assets/blog/authors/aleromano.jpg'
 ---
 
-import { CandyDispenser, Poll } from './components.tsx';
-
-Here's a candy dispenser:
-
-<div
-  style={{
-    padding: 20,
-    border: '2px solid var(--border-secondary)',
-    borderRadius: 5,
-    marginBottom: 20,
-  }}
->
-  <CandyDispenser />
-</div>
-
-Here's how it's implemented:
+Ecco un dispenser di caramelle implementato in React:
 
 ```tsx
 function CandyDispenser() {

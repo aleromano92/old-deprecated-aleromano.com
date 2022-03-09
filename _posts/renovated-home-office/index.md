@@ -1,5 +1,5 @@
 ---
-title: 'I renovate my Home Office'
+title: 'I renovated my Home Office'
 excerpt: "There are things you should consider when creating a home office setup for remote working. Here's what I did."
 date: '2022-03-07T00:00:00.666Z'
 author:

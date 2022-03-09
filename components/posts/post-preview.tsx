@@ -18,7 +18,7 @@ export const PostPreview = ({ title, date, excerpt, readingTime, slug }: Props) 
           <a className="hover:underline">{title}</a>
         </h3>
         <DateAndReadingTime date={date} readingTime={readingTime} />
-        <p className="text-lg">{excerpt}</p>
+        <p className="text sm:text-lg">{excerpt}</p>
       </div>
     </Link>
   );
