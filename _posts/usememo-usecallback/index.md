@@ -17,6 +17,8 @@ author:
   picture: '/assets/blog/authors/aleromano.jpg'
 ---
 
+> Questo articolo rappresenta la traduzione in italiano del post originale [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback) di [Kent C. Dodds](https://kentcdodds.com/)
+
 Ecco un dispenser di caramelle implementato in React:
 
 ```tsx
@@ -127,10 +129,8 @@ setting properties/running through logical expressions etc.
 So in _both_ cases JavaScript must allocate memory for the function definition
 on every render and depending on how `useCallback` is implemented, you may get
 _more_ allocation for function definitions (this is actually not the case, but
-the point still stands). This is what I was trying to get across with my twitter
-poll here:
-
-https://twitter.com/kentcdodds/status/1135943012410830848
+the point still stands). This is what I was trying to get across with my [twitter
+poll here](https://twitter.com/kentcdodds/status/1135943012410830848)
 
 <callout-info class="aside">
   Granted, I had several people tell me that was worded poorly, so my apologies if you got the wrong answer but actually
