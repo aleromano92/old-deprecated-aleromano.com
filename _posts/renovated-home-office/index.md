@@ -1,10 +1,10 @@
 ---
-title: 'I renovate my Home Office'
+title: 'I renovated my Home Office'
 excerpt: "There are things you should consider when creating a home office setup for remote working. Here's what I did."
 date: '2022-03-07T00:00:00.666Z'
 author:
   name: Alessandro Romano
-  picture: '/assets/blog/authors/aleromano.jpg'
+  picture: '../assets/blog/authors/aleromano.jpg'
 ---
 
 > Disclaimer: you will find Amazon affiliate link in this post. If you buy from it, you will offer me a beer, more or less, with no additional cost to you 👍
@@ -20,7 +20,7 @@ The 4 traits I focused on:
 
 ## This was the starting point.
 
-![Starting point](/assets/blog/renovate-home-office/starting.jpeg)
+![Starting point](../assets/blog/renovate-home-office/starting.jpeg)
 
 An horizontal desk 160x60cm, an external monitor, keyboard and mouse. In this picture you can see my old Surface 3 (I sold it) and my books and notebooks while studying for my degree.
 
@@ -37,7 +37,7 @@ An horizontal desk 160x60cm, an external monitor, keyboard and mouse. In this pi
 
 We have a very spacious house (lucky us) so I was able to use part of our basement to create a private Home Office. The room is 3.80 x 2.80 mt and I started sketching a possible furniture disposition.
 
-![Furniture disposition](/assets/blog/renovate-home-office/disposition.jpeg)
+![Furniture disposition](../assets/blog/renovate-home-office/disposition.jpeg)
 
 The most important part I focused on was the desk.
 I wanted a big corner desk with plenty of room to lay down my arms (45cm from desk border to keyboard) and the right distance to my monitors (60-70cm ready to migrate to a big curved one).
@@ -47,9 +47,9 @@ I wanted a library where I can show my Final Fantasy, Kingdom hearts and One Pie
 I wanted to create an atmosphere where the white, wooden and green colors can mix and match to give me a relaxed, bright environment.
 
 So I bought some SPC floor to easily install on top of the existing one: their click mechanism allowed me and my wife to do it on our own.
-![Floor](/assets/blog/renovate-home-office/floor.jpeg)
+![Floor](../assets/blog/renovate-home-office/floor.jpeg)
 
-I looked on different second-hand sites and found my desk, wardrobe and library! There was a lot of fun renting a van with my wife and going to get all of them 🚚 ![Desk](/assets/blog/renovate-home-office/desk.jpeg)
+I looked on different second-hand sites and found my desk, wardrobe and library! There was a lot of fun renting a van with my wife and going to get all of them 🚚 ![Desk](../assets/blog/renovate-home-office/desk.jpeg)
 
 ## New purchases
 
@@ -64,14 +64,14 @@ I bought a transparent carpet to put under the chair in order to protect the new
 
 I already have a desk lamp I use to enlighten my face during video calls, here is the link: [amzn.to/3vJx7P7](https://amzn.to/3vJx7P7)
 
-I bought 3 small plants: aloe vera, Ficus Benjamin and Lucky bamboo. They should help keeping the air quality good. ![Plants](/assets/blog/renovate-home-office/plants.jpeg)
+I bought 3 small plants: aloe vera, Ficus Benjamin and Lucky bamboo. They should help keeping the air quality good. ![Plants](../assets/blog/renovate-home-office/plants.jpeg)
 
 Regarding lightning: for offices, it is advised to have 300-400 Lux per square meter. Simple math 400x11 = 4400 Lumen needed. I bought a lamps holder [amzn.to/3Cm01Gn](https://amzn.to/3Cm01Gn) with 6 LED bulbs 800 Lumen each [amzn.to/3IKPCX4](https://amzn.to/3IKPCX4)
-I chose a warm light as I find it more relaxing. ![Light](/assets/blog/renovate-home-office/light.jpeg)
+I chose a warm light as I find it more relaxing. ![Light](../assets/blog/renovate-home-office/light.jpeg)
 
 This is a bit of how the office looks like right now 😁
-![new desk](/assets/blog/renovate-home-office/new-desk.jpeg)
-![library](/assets/blog/renovate-home-office/library.jpeg)
+![new desk](../assets/blog/renovate-home-office/new-desk.jpeg)
+![library](../assets/blog/renovate-home-office/library.jpeg)
 
 ## Still missing
 

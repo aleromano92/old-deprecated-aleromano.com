@@ -4,7 +4,7 @@ excerpt: "You may think you'll get a poorer Developer eXperience and miss a lot 
 date: '2020-11-01T00:00:00.666Z'
 author:
   name: Alessandro Romano
-  picture: '/assets/blog/authors/aleromano.jpg'
+  picture: '../assets/blog/authors/aleromano.jpg'
 ---
 
 ### Ok, but... why?
@@ -35,14 +35,14 @@ Another great example of Microsoft embracing opens ource, releasing its applicat
 I think the feature I abuse the most. You don't need any external application, it is built-in in any Windows 10 setup.
 Just hold Win Key + V to get the Clipboard Manager that (once activated) is able to store almost infinite Copy Entries, including text, images and whatever you were able to copy.
 It is a breeze to remove all or just some of them and you can even pin your favorite!
-![Clipboard Manager](/assets/blog/0-mac-to-win10/clipboard-manager.png)
+![Clipboard Manager](../assets/blog/0-mac-to-win10/clipboard-manager.png)
 
 ### Emoji Picker -> Win Key + . (dot)
 
 While on Mac OS you can press Command + Control + Spacebar to open the emoji picker
-![Emoji Picker Mac](/assets/blog/0-mac-to-win10/emojiPickerMac.png)
+![Emoji Picker Mac](../assets/blog/0-mac-to-win10/emojiPickerMac.png)
 
 On Windows you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
-![Emoji Picker](/assets/blog/0-mac-to-win10/emojiPicker.jpg)
+![Emoji Picker](../assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
 > Thanks for your time.

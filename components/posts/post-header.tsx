@@ -28,7 +28,7 @@ const PostHeader = ({ title, date, author, readingTime }: Props) => {
         <Avatar name={author.name} picture={author.picture} />
         <DateAndReadingTime date={date} readingTime={readingTime} />
       </div>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="block md:hidden mb-6">
           <Avatar name={author.name} picture={author.picture} />
           <DateAndReadingTime date={date} readingTime={readingTime} />
