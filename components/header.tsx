@@ -19,6 +19,7 @@ export const Header = () => {
         <button
           className="self-center rounded-full border-background-500 dark:border-foreground-500 border-solid border-2 p-1"
           onClick={toggleTheme}
+          aria-label={appContext.themeName === 'light' ? 'Set Dark Theme' : 'Set Light Theme'}
         >
           {appContext.themeName === 'light' && <FaSun className="h-10 w-10" />}
           {appContext.themeName === 'dark' && <FaMoon className="h-10 w-10" />}
