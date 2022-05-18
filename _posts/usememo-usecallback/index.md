@@ -369,25 +369,10 @@ Il rischio è di fare più **danni** che altro.
 
 ## Calcoli computazionalmente pesanti
 
-This is the other reason that `useMemo` is a built-in hook for React (note that
-this one does not apply to `useCallback`). The benefit to `useMemo` is that you
-can take a value like:
+Questa è un'altra ragione per cui `useMemo` è un hook built-in di React (questa cosa non si applica a `useCallback`). Il vantaggio di `useMemo` è evidente nel momento in cui hai una funzione sincrona che esegue dei calcoli computazionalmente costosi.
 
-```js
-const a = { b: props.b };
-```
-
-And get it lazily:
-
-```tsx
-const a = React.useMemo(() => ({ b: props.b }), [props.b]);
-```
-
-This isn't really useful for that case above, but imagine that you've got a
-function that synchronously calculates a value which is computationally
-expensive to calculate (I mean how many apps actually need to
-[calculate prime numbers like this](https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript)
-ever, but that's an example):
+Un esempio, anche se ovviamente poco comune, è
+[il calcolo dei numeri primi](https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript):
 
 ```tsx
 function RenderPrimes({ iterations, multiplier }) {
@@ -396,11 +381,9 @@ function RenderPrimes({ iterations, multiplier }) {
 }
 ```
 
-That could be pretty slow given the right `iterations` or `multiplier` and
-there's not too much you can do about that specifically. You can't automagically
-make your user's hardware faster. But you _can_ make it so you never have to
-calculate the same value twice in a row, which is what `useMemo` will do for
-you:
+Passando grandi valori di `iterations` o `multiplier` si rischia di mandare l'utilizzo CPU alle stelle.
+Ovviamente non possiamo agire sull'hardware che sta eseguendo la nostra funzione, ma _possiamo_ fare in modo che a parità di parametri, il calcolo effettivo verrà eseguito solo la prima volta, mentre le successive esecuzioni ritorneranno il valore "memoizzato".
+No, non ho dimenticato una "r", memoizzare (in inglese _memoization_) è una tecnica che esiste da sempre in programmazione e fin dai tempi di **lodash** in Javascript.
 
 ```tsx
 function RenderPrimes({ iterations, multiplier }) {
@@ -409,53 +392,18 @@ function RenderPrimes({ iterations, multiplier }) {
 }
 ```
 
-The reason this works is because even though you're defining the function to
-calculate the primes on every render (which is VERY fast), React is only calling
-that function when the value is needed. On top of that React also stores
-previous values given the inputs and will return the previous value given the
-same previous inputs. That's memoization at work.
+In questo modo anche se stiamo calcolando i numeri primi ad ogni render, `useMemo` fa in modo di essere super veloci nel caso in cui i valori di `iterator` e `multiplier` sono già stati passati almeno una volta.
 
-## Conclusion
+## Conclusioni
 
-I'd just like to wrap this up by saying that every abstraction (and performance
-optimization) comes at a cost. Apply
-[the AHA Programming principle](/blog/aha-programming) and wait until the
-abstraction/optimization is screaming at you before applying it and you'll save
-yourself from incurring the costs without reaping the benefit.
+Ricorda sempre che ogni astrazione ed ottimizzazione di performance hanno un costo.
+Non over-astrarre e non over-ottimizzare, non prematuramente almeno o non finchè non hai **misurato** essere necessario.
 
-Specifically the cost for `useCallback` and `useMemo` are that you make the code
-more complex for your co-workers, you could make a mistake in the dependencies
-array, and you're potentially making performance worse by invoking the built-in
-hooks and preventing dependencies and memoized values from being garbage
-collected. Those are all fine costs to incur if you get the performance benefits
-necessary, but **it's best to measure first.**
+Per non parlare la complessità in lettura del codice aggiunta da `useMemo` e `useCallback`: i tuoi colleghi non gradiranno!
 
-Related reading:
+Letture collegate:
 
 - React FAQ:
   ["Are Hooks slow because of creating functions in render?"](https://reactjs.org/docs/hooks-faq.html#are-hooks-slow-because-of-creating-functions-in-render)
 - [Ryan Florence](https://twitter.com/ryanflorence):
   [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance)
-
-P.S. If you're among the few who worry about the move to hooks and that it
-forces us to define functions within our function components where we used to
-define functions as methods on our classes, I would invite you to consider the
-fact that we've been defining methods in the render phase of our components
-since day one... For example:
-
-```tsx
-class FavoriteNumbers extends React.Component {
-  render() {
-    return (
-      <ul>
-        {this.props.favoriteNumbers.map((number) => (
-          // TADA! This is a function defined in the render method!
-          // Hooks did not introduce this concept.
-          // We've been doing this all along.
-          <li key={number}>{number}</li>
-        ))}
-      </ul>
-    );
-  }
-}
-```
