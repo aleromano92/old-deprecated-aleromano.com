@@ -1,3 +1,9 @@
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://aleromano.com
+
+# Sitemaps
+Sitemap: https://aleromano.com/sitemap.xml
