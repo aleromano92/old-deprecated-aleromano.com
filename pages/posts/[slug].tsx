@@ -33,6 +33,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
               <Head>
                 <title>{post.title}</title>
                 <meta property="og:image" content={OG_IMAGE_URL} />
+                <meta name="description" content={post.excerpt} />
               </Head>
               <PostHeader title={post.title} date={post.date} author={post.author} readingTime={post.readingTime} />
               <PostBody content={post.content} />

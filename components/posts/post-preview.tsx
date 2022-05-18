@@ -15,7 +15,7 @@ export const PostPreview = ({ title, date, excerpt, readingTime, slug }: Props) 
     <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref={true}>
       <div className="p-4 border-solid border-2 rounded border-background-500 dark:border-foreground-500 cursor-pointer">
         <h3 className="text-xl md:text-3xl font-bold mb-2 leading-snug">
-          <a className="hover:underline">{title}</a>
+          <p className="hover:underline">{title}</p>
         </h3>
         <DateAndReadingTime date={date} readingTime={readingTime} />
         <p className="text sm:text-lg">{excerpt}</p>
