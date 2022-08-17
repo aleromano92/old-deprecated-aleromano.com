@@ -66,3 +66,11 @@ I usually get another 30-40 minutes to do other things i need or want to do, lik
 
 ## Start working (8.25 AM)
 
+## Going to bed (11.00 PM)
+
+Staying consistent on bed time is fundamental.
+I'm able to get 7 hours of sleep this way, which are not as good as 8 hours, but are good for me in this moment of my life.
+I may have 30 minutes naps during weekend
+I try to stop using any electronic devices after 10.30 PM, the only exception being my Kindle Paperwhite.
+Reading is in fact the thing I do to relax before falling to sleep. 
+
