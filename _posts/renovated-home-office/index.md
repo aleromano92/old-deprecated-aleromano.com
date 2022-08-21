@@ -22,16 +22,16 @@ The 4 traits I focused on:
 
 ![Starting point](../assets/blog/renovate-home-office/starting.jpeg)
 
-An horizontal desk 160x60cm, an external monitor, keyboard and mouse. In this picture you can see my old Surface 3 (I sold it) and my books and notebooks while studying for my degree.
+A horizontal desk 160x60cm, an external monitor, keyboard and mouse. In this picture, you can see my old Surface 3 (I sold it) and my books and notebooks while studying for my degree.
 
 ## The cons
 
 - The chair did not have lumbar support.
-- I could not lay my arms on the desk while typing, because desk was not large enough: the keyboard was too close to desk border.
+- I could not lay my arms on the desk while typing, because the desk was not large enough: the keyboard was too close to the desk border.
 - The keyboard was an old (but good) apple Keyboard with a Mighty Mouse.
 - 🔊 I had no external speakers nor microphone, so my day was always wearing in-ear headphones (a Sony pair which I really love [amzn.to/3pH7TwQ](https://amzn.to/3pH7TwQ) ).
-- 💅🏻 I did have lot of shadows and light coming from the left, making me not looking good in webcam.
-- ❗The room was shared with my wife: her desk was on the opposite side of the room. but we had problems when we both attended meetings. Plus, we used that room as closet so it was a bit messy.
+- 💅🏻 I did have a lot of shadows and light coming from the left, making me not look good on the webcam.
+- ❗The room was shared with my wife: her desk was on the opposite side of the room. but we had problems when we both attended meetings. Plus, we used that room as a closet so it was a bit messy.
 
 ## Start renovating
 
@@ -42,7 +42,7 @@ We have a very spacious house (lucky us) so I was able to use part of our baseme
 The most important part I focused on was the desk.
 I wanted a big corner desk with plenty of room to lay down my arms (45cm from desk border to keyboard) and the right distance to my monitors (60-70cm ready to migrate to a big curved one).
 
-I wanted a library where I can show my Final Fantasy, Kingdom hearts and One Piece collections: manga, video games, action figures so I can turn off any background filter during video calls and anyone can get a glimpse on my passions. 🏯
+I wanted a library where I can show my Final Fantasy, Kingdom hearts and One Piece collections: manga, video games and action figures so I can turn off any background filter during video calls and anyone can get a glimpse of my passions. 🏯
 
 I wanted to create an atmosphere where the white, wooden and green colors can mix and match to give me a relaxed, bright environment.
 
@@ -56,7 +56,7 @@ I looked on different second-hand sites and found my desk, wardrobe and library!
 First of all, I bought a gaming chair.
 After countless reviews and going through stores, I found the best for my needs in a GT Player chair: [amzn.to/34mU53m](https://amzn.to/34mU53m)
 
-Then, I wanted a portable mechanical keyboard with the numeric pad. I always spied on Keychron and in the end I bought a K4: [amzn.to/3sWJVQB](https://amzn.to/3sWJVQB)
+Then, I wanted a portable mechanical keyboard with a numeric pad. I always spied on Keychron and in the end I bought a K4: [amzn.to/3sWJVQB](https://amzn.to/3sWJVQB)
 
 I wanted a new mouse too, an ergonomic wireless one like the Anker I bought: [amzn.to/3vL5nK6](https://amzn.to/3vL5nK6)
 
@@ -64,12 +64,12 @@ I bought a transparent carpet to put under the chair in order to protect the new
 
 I already have a desk lamp I use to enlighten my face during video calls, here is the link: [amzn.to/3vJx7P7](https://amzn.to/3vJx7P7)
 
-I bought 3 small plants: aloe vera, Ficus Benjamin and Lucky bamboo. They should help keeping the air quality good. ![Plants](../assets/blog/renovate-home-office/plants.jpeg)
+I bought 3 small plants: aloe vera, Ficus Benjamin and Lucky bamboo. They should help keep the air quality good. ![Plants](../assets/blog/renovate-home-office/plants.jpeg)
 
-Regarding lightning: for offices, it is advised to have 300-400 Lux per square meter. Simple math 400x11 = 4400 Lumen needed. I bought a lamps holder [amzn.to/3Cm01Gn](https://amzn.to/3Cm01Gn) with 6 LED bulbs 800 Lumen each [amzn.to/3IKPCX4](https://amzn.to/3IKPCX4)
+Regarding lightning: for offices, it is advised to have 300-400 Lux per square meter. Simple math 400x11 = 4400 Lumen needed. I bought a lamp holder [amzn](https://amzn.to/3Cm01Gn).to/3Cm01Gn](https://amzn.to/3Cm01Gn) with 6 LED bulbs 800 Lumen each [amzn.to/3IKPCX4](https://amzn.to/3IKPCX4)
 I chose a warm light as I find it more relaxing. ![Light](../assets/blog/renovate-home-office/light.jpeg)
 
-This is a bit of how the office looks like right now 😁
+This is a bit of what the office looks like right now 😁
 ![new desk](../assets/blog/renovate-home-office/new-desk.jpeg)
 ![library](../assets/blog/renovate-home-office/library.jpeg)
 
