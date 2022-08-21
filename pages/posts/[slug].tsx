@@ -10,6 +10,7 @@ import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
 import { OG_IMAGE_URL } from '../../lib/constants';
+import { BackButton } from '../../components/common/back-button';
 
 type Props = {
   post: PostType;
@@ -26,16 +27,23 @@ const Post = ({ post, morePosts, preview }: Props) => {
     <Layout preview={preview}>
       <Container>
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <PostTitle excerpt="">Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-16">
+            <BackButton />
+            <article className="mb-16 max-w-4xl mx-auto">
               <Head>
                 <title>{post.title}</title>
                 <meta property="og:image" content={OG_IMAGE_URL} />
                 <meta name="description" content={post.excerpt} />
               </Head>
-              <PostHeader title={post.title} date={post.date} author={post.author} readingTime={post.readingTime} />
+              <PostHeader
+                title={post.title}
+                date={post.date}
+                author={post.author}
+                readingTime={post.readingTime}
+                excerpt={post.excerpt}
+              />
               <PostBody content={post.content} />
             </article>
           </>
