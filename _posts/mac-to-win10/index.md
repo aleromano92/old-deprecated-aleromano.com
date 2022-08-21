@@ -1,6 +1,6 @@
 ---
 title: 'From Mac OS X to Windows as a Developer'
-excerpt: "You may think you'll get a poorer Developer eXperience and miss a lot of feature you take for granted. I can show you how I migrated to good ol' Windows without loosing my head."
+excerpt: "You may think you'll get a poorer Developer eXperience and miss a lot of features you take for granted. I can show you how I migrated to good ol' Windows without losing my head."
 date: '2020-11-01T00:00:00.666Z'
 author:
   name: Alessandro Romano
@@ -15,7 +15,7 @@ This doesn't mean we are not evaluating introducing any Apple notebook in our co
 
 ### Windows has changed
 
-It is crystal clear Microsoft has totally changed its mind regarding Open Source and providing better experiences for Developers. One of the key feature I use the most is **Windows Subsystem for Linux** (WSL). They even released [Visual Studio Code](https://code.visualstudio.com/) which is a pearl in the world of Code Editors (with superpowers).
+It is crystal clear Microsoft has totally changed its mind regarding Open Source and providing better experiences for Developers. One of the key features I use the most is **Windows Subsystem for Linux** (WSL). They even released [Visual Studio Code](https://code.visualstudio.com/) which is a pearl in the world of Code Editors (with superpowers).
 
 ### Spotlight -> Win key
 
@@ -27,8 +27,8 @@ I used to move my cursor in the bottom right corner to securely block my Mac. I 
 
 ### Terminal/iTerm -> Windows Terminal
 
-Another great example of Microsoft embracing opens ource, releasing its applications and made them suitable for developers.
-[Windows Terminal, Console and Command line](https://github.com/microsoft/terminal) has all the features i needed: it works well with old **cmd**, **Power Shell** and **bash** console you get by installing WSL.
+Another great example of Microsoft embracing open source, releasing its applications and making them suitable for developers.
+[Windows Terminal, Console and Command line](https://github.com/microsoft/terminal) has all the features I needed: it works well with the old **cmd**, **Power Shell** and **bash** console you get by installing WSL.
 
 ### Maccy/CopyClip -> Win Key + V (Clipboard Manager)
 
@@ -42,7 +42,7 @@ It is a breeze to remove all or just some of them and you can even pin your favo
 While on Mac OS you can press Command + Control + Spacebar to open the emoji picker
 ![Emoji Picker Mac](../assets/blog/0-mac-to-win10/emojiPickerMac.png)
 
-On Windows you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
+On Windows, you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
 ![Emoji Picker](../assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
 > Thanks for your time.
