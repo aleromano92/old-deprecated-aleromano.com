@@ -27,23 +27,26 @@ Writing a test list before you start writing code is another technique that allo
 
 Breathing exercises are a great way to relax and calm down. They help you focus on what you are doing, which is essential when it comes to fixing bugs.
 
-Sometimes we get so stubborn in trying to fix a bug we forget we should slow down, pause from hitting the keyboard and re-think the problem from a different perspective.
+Sometimes we get so stubborn in trying to fix a bug we forget we should slow down, pause from hitting the keyboard and **re-think the problem from a different perspective**.
 
 Next time you are debugging something without result or facing an incident, try to have 10-minutes of breathing: you will create space in your mind to come up with alternative routes to solve the issue.
 
 ## Be the perfect team member by giving to others
 
-Be generous with your time and resources when it comes to teaching people who are new at something as complex as software development—it will show that you care about their success! The more time they spend learning from you, the more likely they'll feel invested in what they're doing because they've seen firsthand how it benefits everyone involved—including YOU!
+Be generous with your time and resources when it comes to teaching people who are new at something as complex as software development.
+
+**Coaching** is useful for two reasons:
+
+1. you verify your real knowledge regarding a topic and feel any gap you may have
+1. you feel better helping others and knowing you left a trace in the coachee
 
 ## Don't be overwhelmed by your code reviews
 
-It's a good idea to get some practice with reviews before you have to do one. The more you know about how your code is being reviewed, the better equipped you'll be to respond in a way that reflects the actual state of things.
-
-If possible, try running through this process with other developers who have been through similar processes before so that there are no surprises for either of you:
+Doing and receiving code reviews is no easy task.
 
 Don't be defensive about any mistake or issue in your codebase (even if it's an honest mistake). If someone thinks something is wrong with their understanding of what they're looking at, then let them say so and explain why they think so (and make sure they know what constitutes a good explanation).
 
-Don't take it personally when someone has an issue with something specific in their review notes—this isn't meant as an attack on anyone else's ideas! There are many different types of problems out there; just because one person has issues with how something works doesn't mean everyone else will feel similarly aggrieved by its design decisions or implementation details.\*
+Don't take it personally when someone has an issue with something specific in their review notes—this isn't meant as an attack on anyone else's ideas! There are many different types of problems out there; just because one person has issues with how something works doesn't mean everyone else will feel similarly aggrieved by its design decisions or implementation details.
 
 ## Develop a habit of mindful coding
 
