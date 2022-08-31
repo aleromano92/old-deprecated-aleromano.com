@@ -68,4 +68,4 @@ Obviously, you need to practice.
 
 So, what are you waiting for? Take a second look on the meetings you have already planned or go back to this post next time you need to setup one!
 
-> Thanks for your time.
+> DAJE.
