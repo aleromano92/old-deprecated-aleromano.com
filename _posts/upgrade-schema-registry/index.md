@@ -70,7 +70,7 @@ The test consisted in just deploying it in Test and observing it always enters t
 
 We were able to update the Producer after 2 weeks: as soon as no other message was serialized with the `Standard` Registry, we removed the try&fallback code from the consumers ✂️
 
-## SUCCEED
+## SUCCEED 🤘🏻
 
 - try to limit updates' scope and not have too many systems depending on each other ⛓️
 - always try the upgrade in a Test environment 🦺
