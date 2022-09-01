@@ -34,7 +34,34 @@ We modified the consumers so they try to deserialize the event from Schema Regis
 Here's the diff:
 
 ```diff
-PUT THE CODE HERE
+-import { ClientSecretCredential } from '@azure/identity';
++import { ClientSecretCredential, DefaultAzureCredential } from '@azure/identity';
+import { SchemaRegistryClient } from '@azure/schema-registry';
+import { SchemaRegistryAvroSerializer } from '@azure/schema-registry-avro';
+import { Context } from "@azure/functions"
+
+// -----------------------------------
+
++    const premiumClient = new SchemaRegistryClient(
++       process.env.AVRO_SCHEMA_REGISTRY_PREMIUM_FQDN,
++       new DefaultAzureCredential()
++    );
+    const serializer = new SchemaRegistryAvroSerializer(client, { groupName: 'ALL_AVRO_SCHEMA' });
+    context.log('Schema Registry Serializer obtained.');
+    
++    const premiumSerializer = new SchemaRegistryAvroSerializer(premiumClient, { groupName: 'ALL_AVRO_SCHEMA' });
++    context.log('Schema Registry Premium Serializer obtained.');
+ 
++    let received = null;
+-    const received = await serializer.deserialize(serviceBusMessage);
++    try {
++        received = await premiumSerializer.deserialize(serviceBusMessage);
++    } catch {
++        context.log('Cannot deserialize from Premium Schema Registry, fallbacking to Standard...');
++        received = await serializer.deserialize(serviceBusMessage);
++   }
+    context.log('AVRO Message deserialized.');
+
 ```
 
 The test consisted in just deploying it and observing It always enters the fallback branch.
