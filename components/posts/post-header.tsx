@@ -17,12 +17,12 @@ const PostHeader = ({ title, date, author, readingTime, excerpt }: Props) => {
     <>
       <PostTitle excerpt={excerpt}>{title}</PostTitle>
       <div className="hidden md:flex md:flex-col">
-        <Avatar name={author.name} picture={author.picture} />
+        {/* <Avatar name={author.name} picture={author.picture} /> */}
         <DateAndReadingTime date={date} readingTime={readingTime} />
       </div>
       <div className="max-w-4xl mx-auto">
         <div className="block md:hidden">
-          <Avatar name={author.name} picture={author.picture} />
+          {/* <Avatar name={author.name} picture={author.picture} /> */}
           <DateAndReadingTime date={date} readingTime={readingTime} />
         </div>
       </div>
