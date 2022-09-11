@@ -51,7 +51,7 @@ Objectives (they may be more than one) should be simple and easily measurable.
 - Understand how to handle this process
 - Review the excel
 
-When you are not able to set clear objectives it may be a sign **it's** still not time to call a meeting\*\*, you may need more time working offline gathering doubts and things to discuss.
+When you are not able to set clear objectives it may be a sign **it's still not time to call a meeting**, you may need more time working offline gathering doubts and things to discuss.
 
 ## NOTES 📓
 
@@ -63,7 +63,7 @@ This is an optional section where you may signal attention points, from logistic
 - if you spend most of the meeting time sharing a screen it's a good signal the meeting was well prepared and you are going straight to the objectives
 - except for demos or brainstormings, the more people you add to a meeting the higher the risk of inefficiency or excluding part of the audience
 - a recap mail at the end of the meeting is always welcomed, it is easier if objectives were well written
-- you should not fear you may be seen as disrespectful in not accepting a meeting until context and objective are not clarified from the organizer
+- you should not fear you may be seen as disrespectful in not accepting a meeting until context and objective are not clarified by the organizer
 
 You need to practice.
 
