@@ -2,6 +2,7 @@
 title: 'Mindfulness for Developers: Clean Code with a Clean Mind'
 excerpt: "Mindfulness is a way of living in the present moment, focusing on what's happening right now. It can help you become more calm, relaxed and focused. This is an incredible skill for a developer."
 date: '2022-08-27T00:00:00.666Z'
+tags: ['mindfulness', 'clean-code']
 author:
   name: Alessandro Romano
   picture: '../assets/blog/authors/aleromano.jpg'
@@ -39,6 +40,7 @@ Be generous with your time and resources when it comes to teaching people who ar
 
 1. you verify your real knowledge regarding a topic and feel any gap you may have
 1. you feel better helping others and knowing you left a trace in the coachee
+1. you get a sense of respect in the coachee and she/he will be more open when it will be your turn in getting help
 
 ## Don't be overwhelmed by your code reviews
 
@@ -54,6 +56,6 @@ By practicing mindfulness regularly (and especially when working), we can improv
 
 Mindfulness is a skill that can be learned, but it’s not something you have to try. In fact, research shows that mindfulness improves your ability to think clearly and remember details. It also helps you stay focused on the task at hand—even when distractions come up or your mind wanders off into other thoughts (which happens).
 
-Mindfulness helps you become more objective: It trains your brain to focus on tasks rather than getting distracted by external factors like smells or sounds around us. As we learned in Chapter 1 of Clean Code book: “You must keep saying yes until he says no." This means that instead of having one person make all decisions about what happens next in software development projects, there should be collaboration between everyone involved so that everyone knows how things work together as well as which actions will lead towards success with these goals in mind
+Mindfulness helps you become more objective: It trains your brain to focus on tasks rather than getting distracted by external factors like smells or sounds around us. As we learned in Chapter 1 of Clean Code book: “You must keep saying yes until he says no." This means that instead of having one person make all decisions about what happens next in software development projects, there should be a collaboration between everyone involved so that everyone knows how things work together as well as which actions will lead towards success with these goals in mind
 
-> Thanks for your time
+> DAJE!

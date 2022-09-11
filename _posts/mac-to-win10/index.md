@@ -9,7 +9,7 @@ author:
 
 ### Ok, but... why?
 
-I'm working for [AideXa](https://www.aidexa.it) as Head of IT Development (& Delivery) since October after 4 beautiful years at [lastminute.com](https://lastminute.com). As Software Engineer I was so used to my Macbook Pro I thought I would never be able to go back.
+I'm working for [AideXa](https://www.aidexa.it) as Head of IT Development (& Delivery) since October after 4 beautiful years at [lastminute.com](https://lastminute.com). As Software Engineer I was so used to my Macbook Pro that I thought I would never be able to go back.
 AideXa, as a company acting in a High Regulated Environment, has strong requirements in terms of devices and control over them, that's why we preferred to stick to a Microsoft-driven ecosystem with Azure, Active Directory and the Office suite.
 This doesn't mean we are not evaluating introducing any Apple notebook in our company policy should they prove superior in particular areas (yeah, M1 CPU I'm talking about you).
 
@@ -45,4 +45,4 @@ While on Mac OS you can press Command + Control + Spacebar to open the emoji pic
 On Windows, you can access an even better version (it includes GIF search too) by hitting Win Key + . (dot)
 ![Emoji Picker](../assets/blog/0-mac-to-win10/emojiPicker.jpg)
 
-> DAJE.
+> DAJE!

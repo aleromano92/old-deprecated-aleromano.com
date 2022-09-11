@@ -42,4 +42,4 @@ You must be patient and have a desire to help others. You’ll also have to have
 
 During these meetings, you will come across many different personalities, each with their quirks and ways of thinking. By actively listening to your coachee and asking the right questions, you will be able to improve your emotional intelligence which leads to a **more meaningful career**.
 
-> DAJE.
+> DAJE!

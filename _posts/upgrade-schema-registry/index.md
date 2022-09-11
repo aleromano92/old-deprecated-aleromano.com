@@ -2,7 +2,7 @@
 title: 'Upgrade Azure Schema Registry Without Downtime'
 excerpt: 'Be careful updating apps due to breaking changes. Get inspired from what I did.'
 date: '2022-08-31T00:00:00.666Z'
-tags: ['azure', 'code']
+tags: ['azure', 'clean-code']
 author:
   name: Alessandro Romano
   picture: '../assets/blog/authors/aleromano.jpg'
@@ -48,10 +48,10 @@ import { Context } from "@azure/functions"
 +    );
     const serializer = new SchemaRegistryAvroSerializer(client, { groupName: 'ALL_AVRO_SCHEMA' });
     context.log('Schema Registry Serializer obtained.');
-    
+
 +    const premiumSerializer = new SchemaRegistryAvroSerializer(premiumClient, { groupName: 'ALL_AVRO_SCHEMA' });
 +    context.log('Schema Registry Premium Serializer obtained.');
- 
+
 +    let received = null;
 -    const received = await serializer.deserialize(serviceBusMessage);
 +    try {
@@ -77,4 +77,4 @@ We were able to update the Producer after 2 weeks: as soon as no other message w
 - when you plan on using a new Cloud Service, make sure you know the limit of the chosen plan and how hard is to upgrade 🤓
 - discuss your migration strategy with a colleague or someone you respect so you may catch some flaw in your logic 🧑‍🤝‍🧑
 
-> DAJE.
+> DAJE!
