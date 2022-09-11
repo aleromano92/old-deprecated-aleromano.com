@@ -1,6 +1,6 @@
 ---
 title: 'Effective meetings start from the Agenda'
-excerpt: "You can find here my recipe on how to properly setup an agenda for an effective meeting. The questions you'll need to answer beforehand will challenge you at the point you may recognize you don't need the meeting at all."
+excerpt: "You can find here my recipe on how to properly set up an agenda for an effective meeting. The questions you'll need to answer beforehand will challenge you at the point you may recognize you don't need the meeting at all."
 date: '2021-01-16T05:35:07.322Z'
 author:
   name: Alessandro Romano
@@ -43,7 +43,7 @@ Objectives (they may be more than one) should be simple and easily measurable.
 
 - Solve all the open points of the H column of the attached Excel
 - Approve or deny the budget given the business case we are going to present
-- Finalize the algorithm taking a decision on proposal A or B
+- Finalize the algorithm deciding on proposal A or B
 
 **Not-so-good** objectives:
 
@@ -66,6 +66,6 @@ This is an optional section where you may signal attention points, from logistic
 
 You need to practice.
 
-So, what are you waiting for? Take a second look at the meetings you have already planned or go back to this post next time you need to setup one!
+So, what are you waiting for? Take a second look at the meetings you have already planned or go back to this post next time you need to set up one!
 
 > DAJE!

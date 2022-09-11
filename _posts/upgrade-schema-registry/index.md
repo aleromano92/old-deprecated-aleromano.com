@@ -64,7 +64,7 @@ import { Context } from "@azure/functions"
 
 ```
 
-_NOTE:_ the `DefaultAzureCredential` allows us to use a `Managed Idenity` to handle authorization [better than using a client secret](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
+_NOTE:_ `DefaultAzureCredential()` allows us to use a `Managed Identity` to handle authorization [better than using a client secret](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
 
 The test consisted in just deploying it in Test and observing it always enters the fallback branch.
 

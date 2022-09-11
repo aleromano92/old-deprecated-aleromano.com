@@ -15,7 +15,7 @@ This doesn't mean we are not evaluating introducing any Apple notebook in our co
 
 ### Windows has changed
 
-It is crystal clear Microsoft has totally changed its mind regarding Open Source and providing better experiences for Developers. One of the key features I use the most is **Windows Subsystem for Linux** (WSL). They even released [Visual Studio Code](https://code.visualstudio.com/) which is a pearl in the world of Code Editors (with superpowers).
+It is crystal clear Microsoft has changed its mind regarding Open Source and providing better experiences for Developers. One of the key features I use the most is **Windows Subsystem for Linux** (WSL). They even released [Visual Studio Code](https://code.visualstudio.com/) which is a pearl in the world of Code Editors (with superpowers).
 
 ### Spotlight -> Win key
 
@@ -33,7 +33,7 @@ Another great example of Microsoft embracing open source, releasing its applicat
 ### Maccy/CopyClip -> Win Key + V (Clipboard Manager)
 
 I think the feature I abuse the most. You don't need any external application, it is built-in in any Windows 10 setup.
-Just hold Win Key + V to get the Clipboard Manager that (once activated) is able to store almost infinite Copy Entries, including text, images and whatever you were able to copy.
+Just hold Win Key + V to get the Clipboard Manager that (once activated) can store almost infinite Copy Entries, including text, images and whatever you were able to copy.
 It is a breeze to remove all or just some of them and you can even pin your favorite!
 ![Clipboard Manager](../assets/blog/0-mac-to-win10/clipboard-manager.png)
 

@@ -54,7 +54,7 @@ Don't take it personally when someone has an issue with something specific in th
 
 By practicing mindfulness regularly (and especially when working), we can improve our mental health by reducing stress levels; improving focus; enhancing relationships between colleagues/teammates; increasing productivity/productivity over time by improving efficiency with tasks related!
 
-Mindfulness is a skill that can be learned, but it’s not something you have to try. In fact, research shows that mindfulness improves your ability to think clearly and remember details. It also helps you stay focused on the task at hand—even when distractions come up or your mind wanders off into other thoughts (which happens).
+Mindfulness is a skill that can be learned, but it’s not something you have to try. Research shows that mindfulness improves your ability to think clearly and remember details. It also helps you stay focused on the task at hand—even when distractions come up or your mind wanders off into other thoughts (which happens).
 
 Mindfulness helps you become more objective: It trains your brain to focus on tasks rather than getting distracted by external factors like smells or sounds around us. As we learned in Chapter 1 of Clean Code book: “You must keep saying yes until he says no." This means that instead of having one person make all decisions about what happens next in software development projects, there should be a collaboration between everyone involved so that everyone knows how things work together as well as which actions will lead towards success with these goals in mind
 
