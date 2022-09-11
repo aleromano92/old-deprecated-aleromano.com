@@ -59,6 +59,7 @@ This is an optional section where you may signal attention points, from logistic
 
 ### Other things to consider
 
+- if you need to invite creative people like developers, it is better not to set them in the middle of the day or afternoon interrupting a block of work
 - if you spend most of the meeting time sharing a screen it's a good signal the meeting was well prepared and you are going straight to the objectives
 - except for demos or brainstormings, the more people you add to a meeting the higher the risk of inefficiency or excluding part of the audience
 - a recap mail at the end of the meeting is always welcomed, it is easier if objectives were well written
