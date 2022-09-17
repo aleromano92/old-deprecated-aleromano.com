@@ -8,14 +8,14 @@ author:
   picture: '../assets/blog/authors/aleromano.jpg'
 ---
 
-## How to practice meditation
+## How to practice meditation 🧘‍♀️
 
 It's easy to start doing mindfulness meditation. All you have to do is sit down, close your eyes, and focus on the breath as it passes through your nostrils. You don't need any special tools or props—you can use a chair if you want, but it isn't necessary.
 You can even practice it while walking or eating.
 
 If you're new to meditation, this might be intimidating at first: that's why I suggest you start with **guided** meditation using [Headspace](https://www.headspace.com/)
 
-## Code can't be clean if your mind is not
+## Code can't be clean if your mind is not ☀️
 
 Don't think of mindfulness as a state of mind. It's about being aware of what is happening in your mind and body. If you're not mindful, then you might be distracted by external factors and we all know how a long-lasting focus is fundamental when writing code.
 
@@ -24,7 +24,7 @@ Living in the present will prevent you from engineering unnecessary upfront abst
 
 Writing a test list before you start writing code is another technique that allows you to focus on one thing at a time and then move on to the next.
 
-## Breath slowly and fix bugs
+## Breath slowly and fix bugs 🐞
 
 Breathing exercises are a great way to relax and calm down. They help you focus on what you are doing, which is essential when it comes to fixing bugs.
 
@@ -32,7 +32,7 @@ Sometimes we get so stubborn in trying to fix a bug we forget we should slow dow
 
 Next time you are debugging something without result or facing an incident, try to have 10-minutes of breathing: you will create space in your mind to come up with alternative routes to solve the issue.
 
-## Be the perfect team member by giving to others
+## Be the perfect team member by giving to others 🧑‍🤝‍🧑
 
 Be generous with your time and resources when it comes to teaching people who are new at something as complex as software development.
 
@@ -42,7 +42,7 @@ Be generous with your time and resources when it comes to teaching people who ar
 1. you feel better helping others and knowing you left a trace in them
 1. you get a sense of respect from the coachee and she/he will be more open when it will be your turn in getting help
 
-## Don't be overwhelmed by your code reviews
+## Don't be overwhelmed by your code reviews ⏸️
 
 Doing and receiving code reviews is no easy task.
 
@@ -54,7 +54,7 @@ At the same time, when reading someone else code, try to be as objective as poss
 
 > Understand your emotions and when they are influencing your judgement.
 
-## Develop a habit of mindful coding
+## Develop a habit of mindful coding ♾️
 
 As with any other techniques in Software Development, like the _art of refactoring_ or Test-Driven Development, you must practice getting the most out of Mindful Coding.
 
