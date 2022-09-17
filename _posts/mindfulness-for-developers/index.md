@@ -19,7 +19,7 @@ If you're new to meditation, this might be intimidating at first: that's why I s
 
 Don't think of mindfulness as a state of mind. It's about being aware of what is happening in your mind and body. If you're not mindful, then you might be distracted by external factors and we all know how a long-lasting focus is fundamental when writing code.
 
-Having clear intentions on what to do will help you write code that communicates better its **intentions**.
+Having a well-defined plan on what to do will help you write code that communicates better its **intentions**.
 Living in the present will prevent you from engineering unnecessary upfront abstractions.
 
 Writing a test list before you start writing code is another technique that allows you to focus on one thing at a time and then move on to the next.
@@ -39,23 +39,29 @@ Be generous with your time and resources when it comes to teaching people who ar
 **Coaching** is useful for two reasons:
 
 1. you verify your real knowledge regarding a topic and feel any gap you may have
-1. you feel better helping others and knowing you left a trace in the coachee
-1. you get a sense of respect in the coachee and she/he will be more open when it will be your turn in getting help
+1. you feel better helping others and knowing you left a trace in them
+1. you get a sense of respect from the coachee and she/he will be more open when it will be your turn in getting help
 
 ## Don't be overwhelmed by your code reviews
 
 Doing and receiving code reviews is no easy task.
 
-Don't be defensive about any mistake or issue in your codebase (even if it's an honest mistake). If someone thinks something is wrong with their understanding of what they're looking at, then let them say so and explain why they think so (and make sure they know what constitutes a good explanation).
+When reading all the comments, don't be defensive about any mistake or issue pointed out in your codebase. Encourage reviewers to explain their comments completely so you can better understand their points of view.
 
-Don't take it personally when someone has an issue with something specific in their review notes—this isn't meant as an attack on anyone else's ideas! There are many different types of problems out there; just because one person has issues with how something works doesn't mean everyone else will feel similarly aggrieved by its design decisions or implementation details.
+> Remember: they are highlighting issue on what they understood of your code, not on you.
+
+At the same time, when reading someone else code, try to be as objective as possible and always assume good intentions. If you think they wrote inefficient solutions, try first to think why that may be the reason: were they in a rush? Didn't they know about that syntactic sugar that can improve the code? Didn't they know about the effects of this function on other systems?
+
+> Understand your emotions and when they are influencing your judgement.
 
 ## Develop a habit of mindful coding
 
-By practicing mindfulness regularly (and especially when working), we can improve our mental health by reducing stress levels; improving focus; enhancing relationships between colleagues/teammates; increasing productivity/productivity over time by improving efficiency with tasks related!
+As with any other techniques in Software Development, like the _art of refactoring_ or Test-Driven Development, you must practice getting the most out of Mindful Coding.
 
-Mindfulness is a skill that can be learned, but it’s not something you have to try. Research shows that mindfulness improves your ability to think clearly and remember details. It also helps you stay focused on the task at hand—even when distractions come up or your mind wanders off into other thoughts (which happens).
+Starting with a 10-minute breathing exercise after 1 hour spent debugging something without results can be a nice way to introduce yourself to this new experience.
 
-Mindfulness helps you become more objective: It trains your brain to focus on tasks rather than getting distracted by external factors like smells or sounds around us. As we learned in Chapter 1 of Clean Code book: “You must keep saying yes until he says no." This means that instead of having one person make all decisions about what happens next in software development projects, there should be a collaboration between everyone involved so that everyone knows how things work together as well as which actions will lead towards success with these goals in mind
+Writing the test list only after a guided meditation can be another useful association: your brain will love it!
+
+Connect your mind before plugging in your keyboard and enjoy a focused developer experience.
 
 > DAJE!
