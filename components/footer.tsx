@@ -11,7 +11,7 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col-reverse items-center justify-between md:flex-row">
           <span className="text-sm sm:text-center">
-            © 2022{' '}
+            © 2023{' '}
             <a href="https://aleromano.com" target="_blank" className="hover:underline">
               Alessandro Romano
             </a>{' '}
