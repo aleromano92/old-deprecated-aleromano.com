@@ -2,6 +2,8 @@
 
 My personal website.
 
-## Credits
+# DEPRECTAED PROJECT
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+Moved to a low-code setup with Notion and SUper.so
+
+https://aleromano.com
